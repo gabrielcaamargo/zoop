@@ -14,6 +14,7 @@ interface ButtonProps extends ButtonStyleProps {
 	children: string;
 	iconVariant?: IconVariant;
 	iconName?: string;
+	iconSide?: 'left' | 'right';
 }
 
 export function Button({
@@ -22,14 +23,23 @@ export function Button({
 	textColor,
 	iconVariant = 'AntDesign',
 	iconName,
+	iconSide = 'right',
 }: ButtonProps) {
 	return (
 		<S.Container
 			backgroundColor={backgroundColor}
 			textColor={textColor}
 			activeOpacity={0.6}>
+			{iconSide === 'left' && iconName && iconVariant && (
+				<Icon
+					name={iconName}
+					variant={iconVariant}
+					size={18}
+					color={textColor}
+				/>
+			)}
 			<Typography color={textColor}>{children}</Typography>
-			{iconName && iconVariant && (
+			{iconSide === 'right' && iconName && iconVariant && (
 				<Icon
 					name={iconName}
 					variant={iconVariant}
