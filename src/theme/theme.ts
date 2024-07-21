@@ -1,4 +1,4 @@
-type BaseTheme = {
+export type BaseTheme = {
 	backgroundColor: string;
 	textColor: string;
 	contrastColor: ThemeColors;
@@ -39,4 +39,7 @@ export const darkTheme: BaseTheme = {
 	contrastColor: 'purple_300',
 };
 
+export type BaseThemeColors = keyof BaseTheme;
 export type ThemeColors = keyof typeof theme;
+export type DarkTheme = typeof darkTheme;
+export type LightTheme = typeof lightTheme;
