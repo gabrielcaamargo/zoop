@@ -1,14 +1,22 @@
 import React from 'react';
 import {View} from 'react-native';
 
-import {Typography} from '@components';
+import {ThemeProvider} from 'styled-components';
+
+import {Button, Typography} from '@components';
+import {lightTheme} from '@theme';
 
 export default function App() {
 	return (
-		<View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-			<Typography color="purple_100" weight="ExtraBold">
-				Text
-			</Typography>
-		</View>
+		<ThemeProvider theme={lightTheme}>
+			<View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+				<Button
+					backgroundColor="purple_500"
+					textColor="gray_0"
+					iconName="right">
+					Button
+				</Button>
+			</View>
+		</ThemeProvider>
 	);
 }

@@ -15,9 +15,9 @@ import Octicons from 'react-native-vector-icons/Octicons';
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import Zocial from 'react-native-vector-icons/Zocial';
 
-import {theme, ThemeColors} from '@theme';
+import {BaseThemeColors, lightTheme} from '@theme';
 
-type IconVariant =
+export type IconVariant =
 	| 'AntDesign'
 	| 'Entypo'
 	| 'EvilIcons'
@@ -51,12 +51,13 @@ const iconPresets: IconPreset = {
 };
 
 interface IconProps {
-	color?: ThemeColors;
+	color?: BaseThemeColors;
 	variant: IconVariant;
 	name: string;
+	size: number;
 }
 
-export function Icon({variant, name, color = 'gray_1000'}: IconProps) {
+export function Icon({variant, name, size, color = 'gray_1000'}: IconProps) {
 	const IconElement = iconPresets[variant];
 
 	function iconFamilyHasIcon() {
@@ -71,5 +72,5 @@ export function Icon({variant, name, color = 'gray_1000'}: IconProps) {
 
 	iconFamilyHasIcon();
 
-	return <IconElement name={name} size={32} color={theme[color]} />;
+	return <IconElement name={name} size={size} color={lightTheme[color]} />;
 }
