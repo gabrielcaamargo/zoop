@@ -1,20 +1,28 @@
 type BaseTheme = {
 	backgroundColor: string;
 	textColor: string;
-	contrastColor: keyof (typeof theme)['purple'];
+	contrastColor: ThemeColors;
 } & typeof theme;
 
 export const theme = {
-	purple: {
-		purple_100: '#DAC3E8',
-		purple_200: '#D2B7E5',
-		purple_300: '#C19EE0',
-		purple_400: '#B185DB',
-		purple_500: '#A06CD5',
-		purple_600: '#9163CB',
-		purple_700: '#815AC0',
-		purple_800: '#6247AA',
-	},
+	purple_100: '#DAC3E8',
+	purple_200: '#D2B7E5',
+	purple_300: '#C19EE0',
+	purple_400: '#B185DB',
+	purple_500: '#A06CD5',
+	purple_600: '#9163CB',
+	purple_700: '#815AC0',
+	purple_800: '#6247AA',
+	gray_100: '#F8F9FA',
+	gray_200: '#E9ECEF',
+	gray_300: '#DEE2E6',
+	gray_400: '#CED4DA',
+	gray_500: '#ADB5BD',
+	gray_600: '#6C757D',
+	gray_700: '#495057',
+	gray_800: '#343A40',
+	gray_900: '#212529',
+	gray_1000: '#000',
 };
 
 export const lightTheme: BaseTheme = {
@@ -30,3 +38,5 @@ export const darkTheme: BaseTheme = {
 	textColor: '#F5F5F5',
 	contrastColor: 'purple_300',
 };
+
+export type ThemeColors = keyof typeof theme;
