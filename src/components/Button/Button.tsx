@@ -10,12 +10,22 @@ export interface ButtonStyleProps {
 	textColor?: BaseThemeColors;
 }
 
-interface ButtonProps extends ButtonStyleProps {
+type IconProps =
+	| {
+			iconName: string;
+			iconSide: 'left' | 'right';
+			iconVariant: IconVariant;
+	  }
+	| {
+			iconName?: never;
+			iconSide?: never;
+			iconVariant?: never;
+	  };
+
+type ButtonProps = {
 	children: string;
-	iconVariant?: IconVariant;
-	iconName?: string;
-	iconSide?: 'left' | 'right';
-}
+} & ButtonStyleProps &
+	IconProps;
 
 export function Button({
 	children,

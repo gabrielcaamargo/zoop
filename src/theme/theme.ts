@@ -6,14 +6,14 @@ export type BaseTheme = {
 } & typeof theme;
 
 export const theme = {
-	purple_100: '#DAC3E8',
-	purple_200: '#D2B7E5',
-	purple_300: '#C19EE0',
-	purple_400: '#B185DB',
-	purple_500: '#A06CD5',
-	purple_600: '#9163CB',
-	purple_700: '#815AC0',
-	purple_800: '#6247AA',
+	purple_100: '#B57EDC',
+	purple_200: '#A566CC',
+	purple_300: '#944DBB',
+	purple_400: '#8334AA',
+	purple_500: '#721B99',
+	purple_600: '#621488',
+	purple_700: '#510C77',
+	purple_800: '#400566',
 	gray_0: '#FFFFFF',
 	gray_100: '#F8F9FA',
 	gray_200: '#E9ECEF',
