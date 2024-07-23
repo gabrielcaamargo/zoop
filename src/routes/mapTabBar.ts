@@ -18,11 +18,11 @@ export const mapTabBar: Record<keyof AppTabParamList, TabBarIcon> = {
 		label: 'Conversas',
 		focused: {
 			iconVariant: 'Ionicons',
-			iconName: 'chatbox',
+			iconName: 'chatbubbles',
 		},
 		unfocused: {
 			iconVariant: 'Ionicons',
-			iconName: 'chatbox-outline',
+			iconName: 'chatbubbles-outline',
 		},
 	},
 	CallingsScreen: {
@@ -48,7 +48,7 @@ export const mapTabBar: Record<keyof AppTabParamList, TabBarIcon> = {
 		},
 	},
 	SettingsScreen: {
-		label: 'Chamadas',
+		label: 'Config.',
 		focused: {
 			iconVariant: 'Ionicons',
 			iconName: 'settings-sharp',
